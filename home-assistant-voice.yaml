@@ -1535,6 +1535,7 @@ external_components:
       - nabu_microphone
       - voice_assistant
       - voice_kit
+      - audio
     refresh: 0s
 
 audio_dac:

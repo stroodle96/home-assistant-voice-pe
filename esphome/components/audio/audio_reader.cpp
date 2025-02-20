@@ -97,7 +97,7 @@ esp_err_t AudioReader::start(const std::string &uri, AudioFileType &file_type) {
   client_config.user_data = this;
   client_config.buffer_size = HTTP_STREAM_BUFFER_SIZE;
   client_config.keep_alive_enable = true;
-  client_config.timeout_ms = 12000;  // Extended for TTS, shouldn't trigger watchdog resets if caller runs in a task
+  client_config.timeout_ms = 30000;  // Extended for TTS
 
 #if CONFIG_MBEDTLS_CERTIFICATE_BUNDLE
   if (uri.find("https:") != std::string::npos) {
